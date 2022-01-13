@@ -116,3 +116,11 @@ Remaining Agenda
 - Guest - Roopak
 - Implement 1 version of Tic Tac Toe
 - Quiz
+
+
+-- --
+
+Resources
+- notes
+- other reference material
+
