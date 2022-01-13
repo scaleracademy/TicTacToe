@@ -4,28 +4,30 @@ public abstract class Game {
     abstract void displayGameState();
     abstract boolean isDraw();
     abstract boolean hasWinner();
-    abstract boolean makeMove();
+    abstract void makeMove(Move move);
     abstract Player getCurrentPlayer();
     abstract Player getWinningPlayer();
     abstract PlayerVisibleState getPlayerVisibleState(Player player);
+    abstract void updateCurrentPlayer();
 
     // chess / snakes and ladders / tic tac toe
     // everyone can see the entire board
 
     // battleship / cards / scrabble
 
-    abstract void makeMove(Move move);
 
     void play() {
         System.out.println("Playing a game of " + getGameTitle());
         initialize();
         do {
+            updateCurrentPlayer();
             displayGameState();
             Player currentPlayer = getCurrentPlayer();
             PlayerVisibleState state = getPlayerVisibleState(currentPlayer);
             Move move = currentPlayer.makeMove(state);
             makeMove(move);
         } while(!isDraw() && !hasWinner());
+        displayGameState();
         if(isDraw()) {
             System.out.println("Game is a draw");
         } else if (hasWinner()) {

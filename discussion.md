@@ -103,3 +103,16 @@ Requirements Gathering
 
 - Code quality
 - Design Patterns
+
+Break till 9.40
+
+
+-- --
+
+
+Remaining Agenda
+----------------
+
+- Guest - Roopak
+- Implement 1 version of Tic Tac Toe
+- Quiz
